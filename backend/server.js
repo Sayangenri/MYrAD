@@ -6,7 +6,7 @@ const { ethers } = require("ethers");
 const multer = require("multer");
 const { uploadBase64ToLighthouse } = require("./uploadService");
 const { createDatasetToken } = require("./createDatasetAPI");
-import cors from "cors";
+const cors = require("cors");
 
 const app = express();
 
