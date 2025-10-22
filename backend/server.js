@@ -6,9 +6,11 @@ const { ethers } = require("ethers");
 const multer = require("multer");
 const { uploadBase64ToLighthouse } = require("./uploadService");
 const { createDatasetToken } = require("./createDatasetAPI");
+import cors from "cors";
 
 const app = express();
 
+app.use(cors());
 // Enable CORS for all origins
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
